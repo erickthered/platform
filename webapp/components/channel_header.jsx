@@ -542,72 +542,72 @@ export default class ChannelHeader extends React.Component {
             );
 
             if (this.showManagementOptions(channel, isAdmin, isSystemAdmin)) {
-                dropdownContents.push(
-                    <li
-                        key='set_channel_header'
-                        role='presentation'
-                    >
-                        <ToggleModalButton
-                            role='menuitem'
-                            dialogType={EditChannelHeaderModal}
-                            dialogProps={{channel}}
+                    dropdownContents.push(
+                        <li
+                            key='set_channel_header'
+                            role='presentation'
                         >
-                            <FormattedMessage
-                                id='channel_header.setHeader'
-                                defaultMessage='Edit {term} Header'
-                                values={{
-                                    term: (channelTerm)
-                                }}
-                            />
-                        </ToggleModalButton>
-                    </li>
-                );
+                            <ToggleModalButton
+                                role='menuitem'
+                                dialogType={EditChannelHeaderModal}
+                                dialogProps={{channel}}
+                            >
+                                <FormattedMessage
+                                    id='channel_header.setHeader'
+                                    defaultMessage='Edit {term} Header'
+                                    values={{
+                                        term: (channelTerm)
+                                    }}
+                                />
+                            </ToggleModalButton>
+                        </li>
+                    );
 
-                dropdownContents.push(
-                    <li
-                        key='set_channel_purpose'
-                        role='presentation'
-                    >
-                        <a
-                            role='menuitem'
-                            href='#'
-                            onClick={() => this.setState({showEditChannelPurposeModal: true})}
+                    dropdownContents.push(
+                        <li
+                            key='set_channel_purpose'
+                            role='presentation'
                         >
-                            <FormattedMessage
-                                id='channel_header.setPurpose'
-                                defaultMessage='Edit {term} Purpose'
-                                values={{
-                                    term: (channelTerm)
-                                }}
-                            />
-                        </a>
-                    </li>
-                );
+                            <a
+                                role='menuitem'
+                                href='#'
+                                onClick={() => this.setState({showEditChannelPurposeModal: true})}
+                            >
+                                <FormattedMessage
+                                    id='channel_header.setPurpose'
+                                    defaultMessage='Edit {term} Purpose'
+                                    values={{
+                                        term: (channelTerm)
+                                    }}
+                                />
+                            </a>
+                        </li>
+                    );
 
-                dropdownContents.push(
-                    <li
-                        key='rename_channel'
-                        role='presentation'
-                    >
-                        <a
-                            role='menuitem'
-                            href='#'
-                            onClick={this.showRenameChannelModal}
+                    dropdownContents.push(
+                        <li
+                            key='rename_channel'
+                            role='presentation'
                         >
-                            <FormattedMessage
-                                id='channel_header.rename'
-                                defaultMessage='Rename {term}'
-                                values={{
-                                    term: (channelTerm)
-                                }}
-                            />
-                        </a>
-                    </li>
-                );
+                            <a
+                                role='menuitem'
+                                href='#'
+                                onClick={this.showRenameChannelModal}
+                            >
+                                <FormattedMessage
+                                    id='channel_header.rename'
+                                    defaultMessage='Rename {term}'
+                                    values={{
+                                        term: (channelTerm)
+                                    }}
+                                />
+                            </a>
+                        </li>
+                    );
 
-                if (!ChannelStore.isDefault(channel)) {
-                    dropdownContents.push(deleteOption);
-                }
+                    if (!ChannelStore.isDefault(channel)) {
+                        dropdownContents.push(deleteOption);
+                    }
             } else if (this.state.userCount === 1) {
                 dropdownContents.push(deleteOption);
             }

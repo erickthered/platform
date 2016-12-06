@@ -79,7 +79,10 @@ export function emitInitialLoad(callback) {
     Client.getInitialLoad(
             (data) => {
                 global.window.mm_config = data.client_cfg;
-                global.window.mm_license = data.license_cfg;
+                global.window.mm_license = {
+                    IsLicensed : 'true',
+                    Company : 'Believe Digital'
+                }//data.license_cfg;
 
                 UserStore.setNoAccounts(data.no_accounts);
 

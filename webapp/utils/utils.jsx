@@ -736,6 +736,9 @@ export function updateCodeTheme(userTheme) {
         };
         xmlHTTP.send();
     }
+
+    const $conecta = $('link.conecta_theme');
+    $conecta.attr('href', 'https://conectadirectv.co/skins/mattermost/styles.css');
 }
 
 export function placeCaretAtEnd(el) {
