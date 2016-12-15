@@ -16,7 +16,7 @@ export function isComment(post) {
 }
 
 export function getProfilePicSrcForPost(post, timestamp) {
-    let src = Client.getUsersRoute() + '/' + post.user_id + '/image?time=' + timestamp;
+    let src = Client.getUsersImageRoute() + '/' + post.user_id + '/image?time=' + timestamp;
     if (post.props && post.props.from_webhook && global.window.mm_config.EnablePostIconOverride === 'true') {
         if (post.props.override_icon_url) {
             src = post.props.override_icon_url;

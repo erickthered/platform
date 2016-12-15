@@ -96,7 +96,7 @@ export default class PopoverListMembers extends React.Component {
                             key={'popover-member-' + i}
                         >
                             <ProfilePicture
-                                src={`${Client.getUsersRoute()}/${m.id}/image?time=${m.update_at}`}
+                                src={`${Client.getUsersImageRoute()}/${m.id}/image?time=${m.update_at}`}
                                 width='26'
                                 height='26'
                             />

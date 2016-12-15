@@ -72,7 +72,7 @@ export default class UserProfile extends React.Component {
         if (this.props.user) {
             name = Utils.displayUsername(this.props.user.id);
             email = this.props.user.email;
-            profileImg = Client.getUsersRoute() + '/' + this.props.user.id + '/image?time=' + this.props.user.update_at;
+            profileImg = 'https://conectadirectv.co/user/mattermost/mm/' + this.props.user.username;
         }
 
         if (this.props.overwriteName) {

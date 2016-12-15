@@ -109,6 +109,10 @@ export default class Client {
         return `${this.url}${this.urlVersion}/users`;
     }
 
+    getUsersImageRoute() {
+        return 'http://conectadirectv.co/user/mattermost/mm';
+    }
+
     getTeamFilesRoute() {
         return `${this.url}${this.urlVersion}/teams/${this.getTeamId()}/files`;
     }

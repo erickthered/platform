@@ -48,7 +48,7 @@ export function createDMIntroMessage(channel, centeredIntro) {
                 <div className='post-profile-img__container channel-intro-img'>
                     <img
                         className='post-profile-img'
-                        src={Client.getUsersRoute() + '/' + teammate.id + '/image?time=' + teammate.update_at}
+                        src={Client.getUsersImageRoute() + '/' + teammate.id + '/image?time=' + teammate.update_at}
                         height='50'
                         width='50'
                     />
