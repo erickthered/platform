@@ -839,6 +839,9 @@ func sendNotificationEmail(c *Context, post *model.Post, user *model.User, chann
 		return
 	}
 
+	amt := time.Duration(rand.Intn(1000))
+    time.Sleep(time.Millisecond * amt)
+
 	if channel.Type == model.CHANNEL_DIRECT && channel.TeamId != team.Id {
 		// this message is a cross-team DM so it we need to find a team that the recipient is on to use in the link
 		if result := <-Srv.Store.Team().GetTeamsByUserId(user.Id); result.Err != nil {
