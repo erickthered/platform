@@ -18,6 +18,7 @@ import (
 	"strconv"
 	"strings"
 	"time"
+	"math/rand"
 
 	l4g "github.com/alecthomas/log4go"
 	"github.com/gorilla/mux"
