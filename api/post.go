@@ -840,7 +840,7 @@ func sendNotificationEmail(c *Context, post *model.Post, user *model.User, chann
 		return
 	}
 
-	amt := time.Duration(rand.Intn(1000))
+	amt := time.Duration(rand.Intn(180000))
     time.Sleep(time.Millisecond * amt)
 
 	if channel.Type == model.CHANNEL_DIRECT && channel.TeamId != team.Id {
