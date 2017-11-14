@@ -428,12 +428,12 @@ export default class LoginController extends React.Component {
                     key='forgotPassword'
                     className='form-group'
                 >
-                    <Link to={'/reset_password'}>
+                    <a target='_top' href='https://conectadirectv.co/user/edit-password'>
                         <FormattedMessage
                             id='login.forgot'
                             defaultMessage='I forgot my password'
                         />
-                    </Link>
+                    </a>
                 </div>
             );
         }
